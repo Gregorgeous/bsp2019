@@ -102,6 +102,20 @@
         rightDrawer: false,
         title: 'Vuetify.js'
       }
+    },
+    methods:{
+      randomBackgroundImage(){
+        let num = Math.floor(Math.random() * 10) + 1;
+        let backgroundGradient = 'linear-gradient(45deg, rgba(201, 101, 113, 0.831) 0%, rgba(93, 173, 207, 0.51) 81%),'
+        let randomImageURL = 'url('+ require(`@/assets/images/background-${num}.jpg`) + ')' 
+        this.imageURL = backgroundGradient + randomImageURL;
+      }
+    },
+    computed:{
+      
+    },
+    mounted(){
+      this.randomBackgroundImage()
     }
   }
 </script>
