@@ -1,9 +1,8 @@
 <template>
 	<v-app dark>
-		<v-navigation-drawer :mini-variant="miniVariant"
-		 :clipped="clipped"
+		<v-navigation-drawer mini-variant
 		 v-model="drawer"
-		 fixed
+		 permanent
 		 app>
 			<v-list>
 				<v-list-tile v-for="(item, i) in items"
@@ -59,8 +58,9 @@ export default {
     return {
       imageURL: null,
       clipped: false,
-      drawer: false,
+      drawer: true,
       fixed: false,
+      mini: true,
       items: [
         { icon: 'apps', title: 'Welcome', to: '/' },
         { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
