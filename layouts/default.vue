@@ -63,7 +63,8 @@
 		</v-navigation-drawer>
 		<v-footer :fixed="fixed"
 		 app>
-			<span>&copy; 2017</span>
+			<a class='caption'
+			 href="https://www.facebook.com/ZHP.Zoliborz/">&vellip; Made by: szczep "Po drodze" i Dział IT W-wa Żoliborz &vellip;</a>
 		</v-footer>
 	</v-app>
 </template>
@@ -112,6 +113,20 @@ export default {
     rgba(93, 173, 207, 0.51) 81%
   );
   background-position: center;
+}
+
+.v-footer {
+  display: flex;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease-out;
+    &:hover {
+      color: gold;
+      text-decoration: underline;
+    }
+  }
 }
 </style>
 
