@@ -119,3 +119,12 @@
     }
   }
 </script>
+
+<style scoped>
+#main-background-window{
+  background-size: cover;
+  background-image: linear-gradient(45deg, rgba(201, 101, 113, 0.831) 0%, rgba(93, 173, 207, 0.51) 81%);
+  background-position: center;
+}
+</style>
+
