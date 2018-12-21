@@ -56,7 +56,7 @@
         <v-icon>menu</v-icon>
       </v-btn>
     </v-toolbar>
-    <v-content>
+    <v-content :style="{backgroundImage:imageURL }" id='main-background-window'>
       <v-container>
         <nuxt />
       </v-container>
