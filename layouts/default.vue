@@ -89,6 +89,7 @@
   export default {
     data() {
       return {
+        imageURL: null,
         clipped: false,
         drawer: true,
         fixed: false,
