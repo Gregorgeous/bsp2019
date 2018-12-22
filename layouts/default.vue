@@ -20,6 +20,7 @@
 			</v-list>
 		</v-navigation-drawer>
 		<v-toolbar fixed
+		 dense
 		 app>
 			<v-toolbar-title>
 				BŚP 2019
