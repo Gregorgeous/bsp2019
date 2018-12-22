@@ -8,13 +8,6 @@
 					<h1 class='title'>Zaloguj się aby zacząć zabawę !</h1>
 					<hr class="my-3">
 				</v-card-text>
-				<v-card-actions>
-					<v-spacer />
-					<v-btn color="primary"
-					 flat
-					 nuxt
-					 to="/inspire">Kontynuuj</v-btn>
-				</v-card-actions>
 			</v-card>
 		</v-flex>
 	</v-layout>
