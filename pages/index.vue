@@ -1,6 +1,5 @@
 <template>
-	<v-layout column
-	 justify-center
+	<v-layout justify-center
 	 align-center>
 		<v-flex xs12>
 			<v-card>
