@@ -68,14 +68,17 @@
 				</nuxt-link> :)
 			</small>
 			<br>
+			<passwordReset></passwordReset>
 		</div>
 	</div>
 </template>
 
 <script>
 import axios from 'axios'
+import passwordReset from '@/components/passwordReset'
 
 export default {
+  components: { passwordReset },
   data: () => ({
     valid: true,
     name: '',
