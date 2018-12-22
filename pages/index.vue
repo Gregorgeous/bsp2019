@@ -23,5 +23,11 @@
 <script>
 export default {
   name: 'home',
+  data: () => ({
+    patrolName: 'patrol1',
+    score: '15',
+    questsFinished: '2',
+    questsLeft: '30'
+  })
 }
 </script>
