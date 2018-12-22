@@ -24,3 +24,15 @@ export default {
   })
 }
 </script>
+
+
+<style lang="scss" scoped>
+.v-card__title.headline.segment {
+  background-color: lightseagreen;
+}
+
+.segment {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
