@@ -25,4 +25,24 @@ export const mutations = {
   },
 }
 
-export const actions = {}
+export const actions = {
+  register({ commit, dispatch }, payload) {
+    commit('changeLoadingState', true)
+    return firebase
+      .auth()
+      .createUserWithEmailAndPassword(payload.email, payload.password)
+      .then(res => {
+        let uid = res.user.uid
+        let newUserObject = {
+          ...payload,
+          uid
+        }
+        return dispatch('createTheAccount', newUserObject)
+      })
+      .catch(err => {
+        console.log(err)
+        commit('changeLoadingState', false)
+        return false
+      })
+  }
+}
