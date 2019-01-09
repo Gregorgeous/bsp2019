@@ -19,6 +19,10 @@ export const state = () => ({
   }
 })
 
-export const mutations = {}
+export const mutations = {
+  changeLoadingState(state, boolStatus) {
+    state.loadingState = boolStatus
+  },
+}
 
 export const actions = {}
