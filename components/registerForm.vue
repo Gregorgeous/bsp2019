@@ -113,7 +113,8 @@ export default {
             email: this.email,
             password: this.password,
             persistentLogin: this.persistentLogin,
-            patrolName: this.patrolName
+            patrolName: this.name,
+            accessLevel: 1
           })
           .then(result => {
             console.log('result of promise', result)
