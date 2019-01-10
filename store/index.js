@@ -26,6 +26,36 @@ export const mutations = {
 }
 
 export const actions = {
+  createTheAccount({ commit }, payload) {
+    console.log('Im here !!')
+    console.log('this is my payload')
+    console.log(payload)
+
+    let correctCollection = findAdequateCollection(payload.accessLevel)
+
+    return firebase
+      .firestore()
+      .collection(correctCollection)
+      .doc(`${payload.uid}`)
+      .set({
+        AtQuest: '',
+        Email: payload.email,
+        OnTheMove: false,
+        PatrolName: payload.patrolName,
+        QuestsVisited: {},
+        Score: 0
+      })
+      .then(() => {
+        console.log('Account successfully created ')
+        commit('changeLoadingState', false)
+        return true
+      })
+      .catch(err => {
+        console.log(`There was an error: ${err}`)
+        commit('changeLoadingState', false)
+        return false
+      })
+  },
   register({ commit, dispatch }, payload) {
     commit('changeLoadingState', true)
     return firebase
