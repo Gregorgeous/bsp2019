@@ -133,10 +133,9 @@ export default {
     }
   },
   computed: {
-    // TODO: implement upon vuex creation
-    //   isLoading() {
-    //     return this.$store.state.loadingState;
-    //   }
+    isLoading() {
+      return this.$store.state.loadingState
+    },
   }
 }
 </script>
