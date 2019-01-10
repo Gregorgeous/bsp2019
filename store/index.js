@@ -46,3 +46,20 @@ export const actions = {
       })
   }
 }
+
+// IDEA: this helper function resolves the collection choice (intended to be used more extensively upon game accounts creation at later stage)
+function findAdequateCollection(accessLevel) {
+  switch (accessLevel) {
+    case 1:
+      return 'GamePatrols'
+
+    case 2:
+      return 'QuestGivers'
+
+    case 3:
+      return 'Organisers'
+
+    case 4:
+      return 'Master'
+  }
+}
